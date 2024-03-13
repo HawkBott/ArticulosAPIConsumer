@@ -1,0 +1,18 @@
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform .3s ease-in-out;
+  }
+  
+  .card-img-top {
+    height: 200px; /* Ajustar según necesidad */
+    object-fit: cover;
+  }
+  
+  .card-title {
+    color: #0056b3; /* Ajustar al color primario de tu tema */
+  }
+  
+  .container {
+    max-width: 1200px; /* Ajustar según necesidad */
+  }
+  

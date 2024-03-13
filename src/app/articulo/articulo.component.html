@@ -1,0 +1,31 @@
+<div class="container py-4">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center mb-4">Lista de Artículos</h1>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let articulo of listaArticulos">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ articulo.fotoProducto }}" class="card-img-top" alt="Foto del producto">
+          <div class="card-body">
+            <h5 class="card-title">{{ articulo.nombProd }}</h5>
+            <p class="card-text"><small class="text-muted">ID: {{ articulo._id }}</small></p>
+            <p class="card-text">Cantidad Existente: {{ articulo.cantExistente }}</p>
+            <p class="card-text">Categoría: {{ articulo.categoria.nombCat }} - {{ articulo.categoria.descCat }}</p>
+            <p class="card-text">Costo: ${{ articulo.costo }}</p>
+            <!-- Más detalles aquí -->
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Descuento: {{ articulo.descuento }}%</li>
+            <li class="list-group-item">Estatus: {{ articulo.estatus }}</li>
+            <!-- Más detalles como este -->
+          </ul>
+          <div class="card-footer">
+            <small class="text-muted">Fecha de Registro: {{ articulo.fechaRegistro }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
